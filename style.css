@@ -1,0 +1,626 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    scroll-behavior: smooth;
+}
+
+/* MENU */
+
+.topnav {
+
+    background-color: rgba(0,0,0,.95);
+    display: flex;
+    justify-content: center;
+    padding: 18px 30px;
+    position: fixed;
+    top: 95px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #3e2a8f;
+    backdrop-filter: blur(10px);
+
+}
+
+.topnav a {
+
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 17px;
+    transition: 0.3s;
+
+}
+
+
+.topnav a:hover {
+
+    color: #3e2a8f;
+
+}
+
+
+/* HOME */
+
+.header {
+
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url("https://i.pinimg.com/736x/f6/cd/3e/f6cd3e149e741a6b6393da9b940feaae.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.header h1 {
+
+    font-size: 45px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+
+}
+
+
+.header p {
+
+    font-size: 20px;
+    color: white;
+
+}
+
+
+/* PRODUTOS */
+
+.row {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px 20px;
+
+}
+
+
+.sellcard {
+
+    background-color: #111;
+    width: 260px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(62,42,143,0.4);
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+}
+
+
+.sellcard:hover {
+
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(62,42,143,0.6);
+
+}
+
+
+.sellcard img {
+
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+
+.descricao {
+
+    color: #bbb;
+    margin: 15px;
+
+}
+
+
+.valor {
+
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    margin:10px;
+
+}
+
+
+.compra {
+
+    background:#333;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+.compra:hover {
+
+    background:#3e2a8f;
+
+}
+
+
+/* INFORMAÇÕES HOME */
+
+.info-box {
+
+    background:#111;
+    width:260px;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    color:white;
+    margin:15px;
+
+}
+
+
+/* ================= NOVO CARRINHO DE COMPRAS ================= */
+
+
+.titulo-carrinho{
+
+    text-align:center;
+    color:white;
+    font-size:35px;
+    margin:40px;
+    letter-spacing:3px;
+    text-shadow:0 0 15px #3e2a8f;
+
+}
+
+
+/* ÁREA DOS PRODUTOS */
+
+.carrinho{
+
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+
+}
+
+
+
+/* CARD DO PRODUTO */
+
+.item-carrinho{
+
+    background:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    border:1px solid #222;
+
+    box-shadow:0 0 15px rgba(62,42,143,.4);
+
+    transition:.3s;
+
+}
+
+
+
+.item-carrinho:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 25px rgba(62,42,143,.8);
+
+}
+
+
+
+/* IMAGEM */
+
+.item-carrinho img{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    border:2px solid #3e2a8f;
+
+}
+
+
+
+/* INFORMAÇÕES */
+
+.produto-info{
+
+    flex:1;
+
+}
+
+
+
+.produto-info h2{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.produto-info p{
+
+    color:#aaa;
+
+}
+
+
+
+/* QUANTIDADE */
+
+.quantidade{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+
+
+.quantidade button{
+
+    background:#3e2a8f;
+
+    color:white;
+
+    border:none;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+
+
+.quantidade span{
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+
+
+/* PREÇO */
+
+.preco{
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* BOTÃO REMOVER */
+
+.remover{
+
+    background:#800000;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+.remover:hover{
+
+    background:red;
+
+}
+
+
+
+/* RESUMO */
+
+.final-compra{
+
+    background:#111;
+
+    width:350px;
+
+    padding:30px;
+
+    margin:40px 5% 40px auto;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    border:1px solid #3e2a8f;
+
+    box-shadow:0 0 20px rgba(62,42,143,.5);
+
+}
+
+
+
+.final-compra h2{
+
+    color:#3e2a8f;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.final-compra p{
+
+    color:white;
+
+    margin:15px;
+
+}
+
+
+
+/* BOTÃO FINALIZAR */
+
+.finalizar{
+
+    background:#3e2a8f;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 35px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+
+.finalizar:hover{
+
+    background:#210d6d;
+
+    box-shadow:0 0 20px #3e2a8f;
+
+}
+
+
+
+/* CELULAR */
+
+@media(max-width:800px){
+
+
+.item-carrinho{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.final-compra{
+
+    width:90%;
+
+    margin:30px auto;
+
+}
+
+
+}
+
+
+.resumo h2 {
+
+    color:#3e2a8f;
+
+}
+
+
+.resumo button {
+
+    background:#3e2a8f;
+    color:white;
+    border:none;
+    padding:15px 40px;
+    border-radius:10px;
+    cursor:pointer;
+
+}
+
+
+.resumo button:hover {
+
+    background:#210d6d;
+
+}
+
+
+/* RODAPÉ */
+
+footer {
+
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:auto;
+
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:800px){
+
+
+    .topnav {
+
+        flex-direction:column;
+        gap:10px;
+
+    }
+
+
+    .sellcard {
+
+        width:90%;
+
+    }
+
+
+    .produto-carrinho {
+
+        width:90%;
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+
+    .resumo {
+
+        width:80%;
+
+    }
+
+
+}
+
+
+/*CABEÇALHO DA LOJA*/
+
+.logo-header{
+
+    position: fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:#000;
+
+    padding:18px 0;
+
+    text-align:center;
+
+    z-index:1100;
+
+    border-bottom:1px solid #3e2a8f;
+
+    box-shadow:0 0 20px rgba(62,42,143,.5);
+
+}
+
+.logo-header h1{
+
+    color:white;
+
+    font-size:42px;
+
+    letter-spacing:8px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 10px #220946,
+        0 0 20px #3e2a8f,
+        0 0 40px #3e2a8f;
+
+}
+
+.logo-header p{
+
+    margin-top:1px;
+
+    color:#bfbfbf;
+
+    letter-spacing:4px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    font-size:14px;
+
+}
